@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "fontset", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fontset";
+  src: url(./GenSekiGothic-B.ttc);
+}
+header,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+.orange {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+  width: 55vw;
+  height: 150vh;
+}
+
+Header nav {
+  width: 100%;
+}
+Header nav ul {
+  padding: 1rem;
+  width: 70%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+Header nav ul li {
+  font-size: 1.75rem;
+}
+Header nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.left {
+  flex: 3 1 500px;
+  padding: 2rem;
+}
+main section.left h1 {
+  font-size: 4rem;
+  color: #f87b35;
+  margin: 2rem;
+}
+main section.left p {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+main section.right {
+  flex: 1 1 600px;
+  position: relative;
+}
+main section.right img {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  top: 30vh;
+  right: 29vw;
+}
+main section.table {
+  font-size: 1.25rem;
+  padding: 2rem;
+  flex: 3 1 500px;
+}
+main section.table table {
+  border-collapse: collapse;
+}
+main section.table table tr {
+  border-bottom: 2px solid gray;
+  transition: all 0.2s ease;
+}
+main section.table table tr td {
+  padding: 1.5rem;
+}
+main section.table table tr:hover {
+  background-color: #ffbb94;
+}
+main section.picture {
+  padding: 2rem;
+  flex: 1 1 600px;
+  position: relative;
+}
+main section.picture img {
+  width: 30vw;
+}
+main section.picture div.OrangeReact {
+  width: 30vw;
+  height: 65vh;
+  background-color: #f87b35;
+  position: absolute;
+  top: 60px;
+  left: 90px;
+  z-index: -1;
+}
+main section.form {
+  flex: 1 1 500px;
+}
+main section.form form {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+}
+main section.form form div {
+  margin: 0.5rem;
+}
+main section.form form div label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+main section.form form div input,
+main section.form form div textarea {
+  background-color: #fc995f;
+  color: wheat;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.25rem;
+  border: none;
+  width: 80%;
+}
+main section.form form div textarea {
+  vertical-align: top;
+}
+main section.form form button {
+  align-self: center;
+  background-color: #f87b35;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+main div.line {
+  background-color: gray;
+  width: 3px;
+}
+main section.contact {
+  flex: 1 1 500px;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+main section.contact div.contact h2 {
+  margin: 1rem 0rem;
+}
+
+footer {
+  padding: 2rem;
+}
+footer a {
+  padding: 1rem;
+}
+
+.active {
+  color: #f87b35;
+}
+
+@media screen and (max-width: 1100px) {
+  .orange {
+    opacity: 0.8;
+  }
+  header nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  header nav ul li {
+    padding: 1rem 0rem;
+    border-bottom: 2px solid gray;
+  }
+  main section.left h1 {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  main section.left p {
+    padding: 0rem;
+  }
+  main section.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section.right img {
+    position: static;
+    width: 40vw;
+    height: 40vw;
+  }
+  main section.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section.picture img {
+    width: 60vw;
+  }
+  main section.picture div.OrangeReact {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

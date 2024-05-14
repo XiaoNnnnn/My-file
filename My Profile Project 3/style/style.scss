@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "fontset", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fontset";
+  src: url(./GenSekiGothic-B.ttc);
+}
+
+header,
+body {
+  height: 100%;
+}
+body {
+  position: relative;
+}
+.orange {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1; //最下層
+  width: 55vw;
+  height: 150vh;
+}
+
+Header {
+  nav {
+    width: 100%;
+    ul {
+      padding: 1rem;
+      width: 70%; //當作flex box 設定space around比較方便
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      li {
+        font-size: 1.75rem;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap; //非常重要
+
+  section.left {
+    flex: 3 1 500px;
+    padding: 2rem;
+    h1 {
+      font-size: 4rem;
+      color: #f87b35;
+      margin: 2rem;
+    }
+    p {
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+    }
+  }
+  section.right {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      border-radius: 50%;
+      width: 20vw;
+      height: 20vw;
+      position: absolute;
+      top: 30vh;
+      right: 29vw;
+    }
+  }
+  section.table {
+    font-size: 1.25rem;
+    padding: 2rem;
+    flex: 3 1 500px;
+    table {
+      border-collapse: collapse;
+      tr {
+        border-bottom: 2px solid gray;
+        transition: all 0.2s ease;
+        td {
+          padding: 1.5rem;
+        }
+        &:hover {
+          background-color: #ffbb94;
+        }
+      }
+    }
+  }
+  section.picture {
+    padding: 2rem;
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      width: 30vw;
+    }
+    div.OrangeReact {
+      width: 30vw;
+      height: 65vh;
+      background-color: #f87b35;
+      position: absolute;
+      top: 60px;
+      left: 90px;
+      z-index: -1;
+    }
+  }
+
+  section.form {
+    flex: 1 1 500px;
+    form {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2rem;
+      div {
+        margin: 0.5rem;
+        label {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+        input,
+        textarea {
+          background-color: #fc995f;
+          color: wheat;
+          font-size: 1.25rem;
+          padding: 0.5rem 0.25rem;
+          border: none;
+          width: 80%;
+        }
+        textarea {
+          vertical-align: top;
+        }
+      }
+
+      button {
+        align-self: center;
+        background-color: #f87b35;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 0.75rem 1.5rem;
+        font-size: 2rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  div.line {
+    background-color: gray;
+    width: 3px;
+  }
+
+  section.contact {
+    flex: 1 1 500px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+
+    div.contact {
+      h2 {
+        margin: 1rem 0rem;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 2rem;
+  a {
+    padding: 1rem;
+  }
+}
+.active {
+  color: #f87b35;
+}
+
+@media screen and (max-width: 1100px) {
+  .orange {
+    opacity: 0.8; //透明度
+  }
+  header {
+    nav {
+      ul {
+        width: 100%;
+        flex-direction: column;
+        li {
+          padding: 1rem 0rem;
+          border-bottom: 2px solid gray;
+        }
+      }
+    }
+  }
+  main {
+    section.left {
+      h1 {
+        padding: 0rem;
+        margin: 0rem;
+      }
+      p {
+        padding: 0rem;
+      }
+    }
+    section.right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        position: static;
+        width: 40vw;
+        height: 40vw;
+      }
+    }
+    section.picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 60vw;
+      }
+      div.OrangeReact {
+        display: none;
+      }
+    }
+  }
+}
